@@ -135,11 +135,16 @@ function generateAvatar(config) {
   avatarDiv.style.backgroundColor = avatarDivColor;
   var acroSpan = document.createElement('span');
   var acroSpanColor = invertColorDisplay(avatarDivColor, invertColor)
-  acroSpan.textContent = getUsernameAcronymUppercase(username);
+  var acro = getUsernameAcronymUppercase(username);
+  acroSpan.textContent = acro;
   acroSpan.style.fontSize = `calc(${width} * ${TEXT_SIZE_PERCENTAGE_MULTIPLIER})`
   acroSpan.style.color = acroSpanColor;
   avatarDiv.append(acroSpan);
-  return avatarDiv;
+  return {
+    acro: acro,
+    hex: avatarDivColor,
+    elem: avatarDiv
+  };
 }
 
 function displayAvatar(elemId, config) {
@@ -147,7 +152,7 @@ function displayAvatar(elemId, config) {
   if (!elem) {
     throw new Error(`Cannot find HTML element with id: "${elemId}"`)
   }
-  var avatarDiv = generateAvatar(config);
+  var avatarDiv = generateAvatar(config).elem;
   avatarDiv.id = elemId;
   elem.replaceWith(avatarDiv);
 }
