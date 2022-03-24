@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UsernameAvatarGenerator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="uag.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="card border-secondary mb-3">
+        <div class="card-header">Username Avatar Generator</div>
+        <div class="card-body text-secondary card-body-custom">
+            <div class="form-group row">
+                <label class="col-form-label col-md-3">Text</label>
+                <div class="col-md-9">
+                    <input class="form-control" id="textInput" type="text" placeholder="Username"/>
+                </div>
+            </div>
+    
+            <div class="form-group row">
+                <label class="col-form-label col-md-3">Width</label>
+                <div class="col-md-9">
+                    <input class="form-control" id="widthInput" type="text" placeholder="CSS value" value="50px"/>
+                    <div class="invalid-feedback">
+                        Invalid width CSS value
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group row">
+                <div class="offset-md-3 col-md-9">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invertColorChkbx" checked>
+                        <label class="form-check-label" for="invertColorChkbx">
+                            Invert color
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group row">
+                <label class="col-form-label col-md-3">Color</label>
+                <div class="col-md-9">
+                    <input class="form-control" id="colorInput" type="text" disabled/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-form-label col-md-3 d-flex align-items-center">Result</label>
+                <div class="col-md-9 d-flex justify-content-center align-items-center">
+                    <div id="displayDiv"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-end">
+            <small class="text-muted">&#174;&nbsp;<a class="text-decoration-none" href="https://github.com/brunotot/">Bruno Tot</a></small>
+          </div>
+    </div>
+</body>
+</html>
