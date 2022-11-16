@@ -16,6 +16,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 }
 
 .card-body-custom {
