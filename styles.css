@@ -2,6 +2,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html,
@@ -20,4 +22,8 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+}
+
+html[fullscreen] .card-custom {
+    min-width: 80vw;
 }
